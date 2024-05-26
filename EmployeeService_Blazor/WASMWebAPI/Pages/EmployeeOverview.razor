@@ -1,0 +1,35 @@
+@page "/employeeoverview"
+<h3>Employee        Overview    <a href="@($"addemployee")" class="btn btn-primary"> Add Employee </a></h3>
+
+<table  width="50px" class="emp-Table"></table>
+<tr>
+     <th>      Employee ID     </th>
+     <th>      First Name      </th>
+     <th>      Last Name       </th>
+</tr>
+@foreach (var emp in Employees)
+{
+     <tr>
+          <td>@emp.EmployeeId</td>
+          <td>@emp.FirstName</td>
+          <td>@emp.LastName</td>
+          <td>
+               <a href="@($"employeedetails/{emp.EmployeeId}")" class="btn btn-primary">Details</a>
+          </td>
+          <td>
+               <a href="@($"editemployee/{emp.EmployeeId}")" class="btn btn-primary">Edit</a>
+          </td>
+     </tr>
+     
+}
+@code {
+
+     public List<WASMWebAPI.Pages.EmployeeOverview.Employee> Employees { get; set; }
+     public List<Country> Countries { get; set; }
+    //when the component is starting to run it requests a service from service dependency injection container
+     [Inject]
+    public HttpClient HttpClient { get; set; }
+
+
+
+};
