@@ -1,0 +1,47 @@
+@page "/employeeoverview"
+@using BlazorApp1.Services
+<h3>Employee        Overview    <a href="@($"addemployee")" class="btn btn-primary"> Add Employee </a></h3>
+@if (Employees != null)
+{
+     <table class="emp-Table">
+          <tr>
+               <th> Employee ID </th>
+               <th> First Name </th>
+               <th> Last Name </th>
+          </tr>
+          @foreach (var emp in Employees)
+          {
+               <tr>
+                    <td>@emp.EmployeeId</td>
+                    <td>@emp.FirstName</td>
+                    <td>@emp.LastName</td>
+                    <td>
+                         <a href="@($"employeedetails/{emp.EmployeeId}")" class="btn btn-primary">Details</a>
+                    </td>
+                    <td>
+                         <a href="@($"editemployee/{emp.EmployeeId}")" class="btn btn-primary">Edit</a>
+                    </td>
+               </tr>
+          }
+     </table>
+}
+else
+{
+     <div> Wait until loading finished.... </div>
+}
+
+@code {
+
+     public IEnumerable<BlazorApp1.Pages.EmployeeOverview.Employee> Employees { get; set; }
+     public List<Country> Countries { get; set; }
+    //when the component is starting to run it requests a service from service dependency injection container
+    [Inject]
+    //Way1: public HttpClient HttpClient { get; set; }
+    public IEmployeeDataService EmployeeDataService { get; set; }
+     protected override async Task OnInitializedAsync()
+     {
+
+          //Way1: Employees =await HttpClient.GetFromJsonAsync<List<Employee>>("http://localhost:5103/api/Employee");
+          Employees = await EmployeeDataService.GetEmployees();
+     }
+}

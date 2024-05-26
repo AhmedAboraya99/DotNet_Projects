@@ -1,0 +1,39 @@
+@page "/employeedetails/{EmployeeId:int}"
+@if (CurrentEmployee != null)
+{
+    <h3 class="title">EmployeeDetails of @CurrentEmployee.FirstName @CurrentEmployee.LastName</h3>
+
+    <div class="form-group">
+        <label class="col-form-label"> Employee ID </label>
+        <label class="form-control">@CurrentEmployee.EmployeeId </label>
+
+        <label class="col-form-label"> First Name </label>
+        <label class="form-control">@CurrentEmployee.FirstName </label>
+
+        <label class="col-form-label"> Last Name </label>
+        <label class="form-control">@CurrentEmployee.LastName </label>
+
+        <label class="col-form-label"> Birth Date </label>
+        <label class="form-control">@CurrentEmployee.BirthDate.ToString() </label>
+
+        <label class="col-form-label"> Gender </label>
+        <label class="form-control">@CurrentEmployee.Gender</label>
+
+        <label class="col-form-label"> Marital Status </label>
+        <label class="form-control">@CurrentEmployee.MaritalStatus</label>
+
+        <label class="col-form-label"> Joined Date </label>
+        <label class="form-control">@CurrentEmployee.JoinedDate.ToString()</label>
+
+        <label class="col-form-label"> Phone Number </label>
+        <label class="form-control">@CurrentEmployee.PhoneNumber</label>
+
+    </div>
+}
+else
+{
+    <div> Wait until loading finished.... </div>
+}
+@code {
+    
+}
