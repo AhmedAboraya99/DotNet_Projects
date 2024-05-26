@@ -4,6 +4,10 @@
 **Description**
 
 This Blazor web application provides a user-friendly interface for managing employee data and their associated countries. It leverages a RESTful API for data persistence and communication.
+![image](https://github.com/AhmedAboraya99/DotNet_Projects/assets/54743198/4eda10cb-0098-4715-844e-5ac5c4391a0b)
+![image](https://github.com/AhmedAboraya99/DotNet_Projects/assets/54743198/18d933db-dc63-4cc3-a2af-4a9929221e7d)
+![image](https://github.com/AhmedAboraya99/DotNet_Projects/assets/54743198/3dac9cce-1ef9-4d9f-a916-8957b7fa0b6b)
+![image](https://github.com/AhmedAboraya99/DotNet_Projects/assets/54743198/20106de7-ff18-48b7-a41f-93034fecff1d)
 
 **Key Features**
 
@@ -19,6 +23,7 @@ This Blazor web application provides a user-friendly interface for managing empl
 **Function APIs**
 
 The API provides the following function APIs for managing employee data:
+![image](https://github.com/AhmedAboraya99/DotNet_Projects/assets/54743198/4feaf29b-5b41-4ac2-82ea-577b575f3bb8)
 
 * **GET /api/employees** - Retrieves a list of all employees.
 * **GET /api/employees/{id)** - Retrieves a specific employee by ID.
@@ -26,7 +31,8 @@ The API provides the following function APIs for managing employee data:
 * **PUT /api/employees/{id)** - Updates an existing employee.
 * **DELETE /api/employees/{id)** - Deletes an employee.
 
-**Optional: Function APIs for Country Management (if implemented)**
+** Function APIs for Country Management**
+![image](https://github.com/AhmedAboraya99/DotNet_Projects/assets/54743198/9a0c31bb-afe9-4fbf-a378-f720f0988061)
 
 * **GET /api/countries** - Retrieves a list of all countries.
 * **GET /api/countries/{id)** - Retrieves a specific country by ID. (if applicable)
