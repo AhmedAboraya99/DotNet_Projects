@@ -25,20 +25,20 @@ This Blazor web application provides a user-friendly interface for managing empl
 The API provides the following function APIs for managing employee data:
 ![image](https://github.com/AhmedAboraya99/DotNet_Projects/assets/54743198/4feaf29b-5b41-4ac2-82ea-577b575f3bb8)
 
-* **GET /api/employees** - Retrieves a list of all employees.
-* **GET /api/employees/{id)** - Retrieves a specific employee by ID.
-* **POST /api/employees** - Creates a new employee.
-* **PUT /api/employees/{id)** - Updates an existing employee.
-* **DELETE /api/employees/{id)** - Deletes an employee.
+* **GET /api/Employee** - Retrieves a list of all employees.
+* **GET /api/Employee/{id}** - Retrieves a specific employee by ID.
+* **POST /api/Employee** - Creates a new employee.
+* **PUT /api/Employee/{id}** - Updates an existing employee.
+* **DELETE /api/Employee/{id}** - Deletes an employee.
 
 ** Function APIs for Country Management**
 ![image](https://github.com/AhmedAboraya99/DotNet_Projects/assets/54743198/9a0c31bb-afe9-4fbf-a378-f720f0988061)
 
-* **GET /api/countries** - Retrieves a list of all countries.
-* **GET /api/countries/{id)** - Retrieves a specific country by ID. (if applicable)
-* **POST /api/countries** - Creates a new country. (if applicable)
-* **PUT /api/countries/{id)** - Updates an existing country. (if applicable)
-* **DELETE /api/countries/{id)** - Deletes a country. (if applicable)
+* **GET /api/Country** - Retrieves a list of all countries.
+* **GET /api/Country/{id}** - Retrieves a specific country by ID. (if applicable)
+* **POST /api/Country** - Creates a new country. (if applicable)
+* **PUT /api/Country/{id}** - Updates an existing country. (if applicable)
+* **DELETE /api/Country/{id}** - Deletes a country. (if applicable)
 
 **Prerequisites**
 
